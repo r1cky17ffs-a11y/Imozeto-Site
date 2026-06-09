@@ -1430,4 +1430,23 @@ flex-direction:column;
 
 }
 
+.about-section,
+.services-section,
+.country-section,
+.contact-section{
+
+opacity:0;
+transform:translateY(60px);
+transition:.8s ease;
+
+}
+
+.about-section.show,
+.services-section.show,
+.country-section.show,
+.contact-section.show{
+
+opacity:1;
+transform:translateY(0);
+
 }
