@@ -1,91 +1,35 @@
-```javascript
-/* ==================================
-MENU OVERLAY
-================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('menu-icon');
+    const navMenu = document.getElementById('nav-menu');
 
-const openMenu = document.getElementById("openMenu");
-const closeMenu = document.getElementById("closeMenu");
-const menuOverlay = document.getElementById("menuOverlay");
+    if (menuIcon && navMenu) {
+        menuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuIcon.classList.toggle('open'); // Opcional: para animar as linhas do ícone
+        });
 
-openMenu.addEventListener("click", () => {
-    menuOverlay.classList.add("active");
+        // Fecha o menu quando um item é clicado (útil para Single Page Applications)
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    menuIcon.classList.remove('open');
+                }
+            });
+        });
+    }
+
+    // Opcional: Animação para o ícone do menu
+    // Adicionar ao CSS:
+    /*
+    .menu-icon.open span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .menu-icon.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-icon.open span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    */
 });
-
-closeMenu.addEventListener("click", () => {
-    menuOverlay.classList.remove("active");
-});
-
-/* ==================================
-FECHAR MENU AO CLICAR NUM LINK
-================================== */
-
-document.querySelectorAll(".overlay-nav a").forEach(link => {
-
-    link.addEventListener("click", () => {
-        menuOverlay.classList.remove("active");
-    });
-
-});
-
-/* ==================================
-IDIOMAS
-================================== */
-
-function setLanguage(lang){
-
-    localStorage.setItem("language", lang);
-
-    document.querySelectorAll("[data-pt]").forEach(element => {
-
-        if(lang === "pt"){
-            element.textContent = element.getAttribute("data-pt");
-        }
-
-        if(lang === "en"){
-            element.textContent = element.getAttribute("data-en");
-        }
-
-    });
-
-}
-
-/* ==================================
-CARREGAR IDIOMA GUARDADO
-================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const savedLanguage =
-        localStorage.getItem("language") || "pt";
-
-    setLanguage(savedLanguage);
-
-});
-
-/* ==================================
-ANIMAÇÃO AO SCROLL
-================================== */
-
-const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-
-    });
-
-},{
-    threshold:0.15
-});
-
-document.querySelectorAll(
-    ".about, .service-section, .contact"
-).forEach(section => {
-
-    section.classList.add("hidden");
-    observer.observe(section);
-
-});
-```
