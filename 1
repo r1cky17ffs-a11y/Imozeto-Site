@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imozeto - Engenharia e Projetos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f9fa;
+    color:#333;
+}
+
+header{
+    background:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#0c4a6e;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:25px;
+    font-weight:500;
+}
+
+.hero{
+    min-height:90vh;
+    background:
+    linear-gradient(rgba(12,74,110,0.8),rgba(12,74,110,0.8)),
+    url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:35px;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#0c4a6e;
+    padding:15px 35px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#0c4a6e;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0c4a6e;
+}
+
+.why{
+    background:#0c4a6e;
+    color:white;
+}
+
+.why .section-title{
+    color:white;
+}
+
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.benefit{
+    text-align:center;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project{
+    height:250px;
+    background:#ddd;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.project img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.contact{
+    background:#f1f5f9;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+}
+
+textarea{
+    height:150px;
+}
+
+.submit{
+    background:#0c4a6e;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.quote{
+    background:#111827;
+    color:white;
+    text-align:center;
+    font-size:24px;
+    font-style:italic;
+    padding:80px 10%;
+}
+
+footer{
+    background:#0c4a6e;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">IMOZETO</div>
+
+    <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Projetos de Engenharia que Transformam Ideias em Realidade</h1>
+
+<p>
+Desenvolvemos projetos de engenharia, especialidades e modelação BIM
+para habitação, comércio e indústria.
+</p>
+
+<a href="#contacto" class="btn">Pedir Orçamento</a>
+
+</div>
+
+</section>
+
+<section id="servicos">
+
+<h2 class="section-title">Os Nossos Serviços</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Estruturas</h3>
+<p>Betão armado, estruturas metálicas e reabilitação.</p>
+</div>
+
+<div class="card">
+<h3>Especialidades</h3>
+<p>Águas, esgotos, térmica, acústica e SCIE.</p>
+</div>
+
+<div class="card">
+<h3>BIM</h3>
+<p>Modelação 3D e coordenação de projetos.</p>
+</div>
+
+<div class="card">
+<h3>Licenciamento</h3>
+<p>Acompanhamento completo dos processos.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="why">
+
+<h2 class="section-title">Porque Escolher a Imozeto</h2>
+
+<div class="benefits">
+
+<div class="benefit">
+<h3>Rigor Técnico</h3>
+<p>Soluções dimensionadas com precisão.</p>
+</div>
+
+<div class="benefit">
+<h3>Eficiência</h3>
+<p>Projetos otimizados para reduzir custos.</p>
+</div>
+
+<div class="benefit">
+<h3>Acompanhamento</h3>
+<p>Suporte desde a ideia até à execução.</p>
+</div>
+
+<div class="benefit">
+<h3>Inovação BIM</h3>
+<p>Visualização moderna e coordenação avançada.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projetos">
+
+<h2 class="section-title">Projetos Realizados</h2>
+
+<div class="projects">
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2">
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
+</div>
+
+</div>
+
+</section>
+
+<section class="quote">
+
+"Juntar-se é um começo, permanecer juntos é um processo e trabalhar juntos é um sucesso."
+
+</section>
+
+<section id="contacto" class="contact">
+
+<h2 class="section-title">Solicite um Orçamento</h2>
+
+<form>
+
+<input type="text" placeholder="Nome">
+
+<input type="email" placeholder="Email">
+
+<input type="tel" placeholder="Telefone">
+
+<textarea placeholder="Descreva o seu projeto"></textarea>
+
+<input type="submit" value="Enviar Pedido" class="submit">
+
+</form>
+
+</section>
+
+<footer>
+
+<p>IMOZETO © 2026</p>
+
+<p>Engenharia • Projetos • Licenciamento</p>
+
+</footer>
+
+</body>
+</html>
