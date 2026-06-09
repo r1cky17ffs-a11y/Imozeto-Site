@@ -1,24 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // MENU MOBILE
-    const menuIcon = document.getElementById('menu-icon');
-    const navMobile = document.getElementById('nav-mobile');
 
-    if (menuIcon && navMobile) {
+    const menuBtn = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('nav-mobile');
 
-        menuIcon.addEventListener('click', () => {
+    if (menuBtn && mobileMenu) {
 
-            menuIcon.classList.toggle('open');
-            navMobile.classList.toggle('active');
-
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuBtn.classList.toggle('open');
         });
 
-        navMobile.querySelectorAll('a').forEach(link => {
+        mobileMenu.querySelectorAll('a').forEach(link => {
 
             link.addEventListener('click', () => {
 
-                menuIcon.classList.remove('open');
-                navMobile.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                menuBtn.classList.remove('open');
 
             });
 
@@ -27,14 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // TRADUÇÕES
+
     const translations = {
 
         pt: {
 
-            heroTitle: "Projetamos os seus sonhos.<br>Construímos confiança.",
+            heroTitle:
+                "Projetamos os seus sonhos.<br>Construímos confiança.",
 
             heroSubtitle:
-                "Estruturas • Especialidades • Preparação Técnica de Obra"
+                "Estruturas • Especialidades • Preparação Técnica de Obra",
+
+            aboutTitle:
+                "Projetamos para Construir"
 
         },
 
@@ -44,7 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 "We design your dreams.<br>We build trust.",
 
             heroSubtitle:
-                "Structures • Engineering Services • Construction Planning"
+                "Structures • Engineering Services • Construction Planning",
+
+            aboutTitle:
+                "Designing for Construction"
 
         },
 
@@ -54,79 +61,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Wir planen Ihre Träume.<br>Wir bauen Vertrauen.",
 
             heroSubtitle:
-                "Strukturen • Fachplanung • Bauvorbereitung"
+                "Strukturen • Fachplanung • Bauvorbereitung",
+
+            aboutTitle:
+                "Planen zum Bauen"
 
         }
 
     };
 
-    const langButtons = document.querySelectorAll('.lang-btn');
-
-    langButtons.forEach(btn => {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
 
         btn.addEventListener('click', (e) => {
 
             e.preventDefault();
 
-            langButtons.forEach(b => {
-                b.classList.remove('active');
-            });
+            document.querySelectorAll('.lang-btn')
+                .forEach(b => b.classList.remove('active'));
 
             btn.classList.add('active');
 
             const lang = btn.dataset.lang;
+            const t = translations[lang];
 
-            const heroTitle =
-                document.getElementById('hero-title');
-
-            const heroSubtitle =
-                document.getElementById('hero-subtitle');
+            const heroTitle = document.getElementById('hero-title');
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            const aboutTitle = document.getElementById('about-title');
 
             if (heroTitle) {
-
-                heroTitle.innerHTML =
-                    translations[lang].heroTitle;
-
+                heroTitle.innerHTML = t.heroTitle;
             }
 
             if (heroSubtitle) {
+                heroSubtitle.innerHTML = t.heroSubtitle;
+            }
 
-                heroSubtitle.innerHTML =
-                    translations[lang].heroSubtitle;
-
+            if (aboutTitle) {
+                aboutTitle.textContent = t.aboutTitle;
             }
 
         });
 
     });
-
-    // ANIMAÇÃO DE SCROLL
-    const revealElements = document.querySelectorAll(
-        '.about-section, .services-section, .country-section, .contact-section'
-    );
-
-    const revealOnScroll = () => {
-
-        revealElements.forEach(element => {
-
-            const top =
-                element.getBoundingClientRect().top;
-
-            const trigger =
-                window.innerHeight * 0.85;
-
-            if (top < trigger) {
-
-                element.classList.add('show');
-
-            }
-
-        });
-
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-
-    revealOnScroll();
 
 });
