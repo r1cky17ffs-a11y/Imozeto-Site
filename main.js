@@ -1,171 +1,91 @@
 ```javascript
-/* =========================
-   IMOZETO ENGINEERING
-   LANGUAGE SWITCHER
-========================= */
+/* ==================================
+MENU OVERLAY
+================================== */
 
-const translations = {
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeMenu");
+const menuOverlay = document.getElementById("menuOverlay");
 
-pt: {
+openMenu.addEventListener("click", () => {
+    menuOverlay.classList.add("active");
+});
 
-heroTitle:
-"Engenharia Pensada para a Realidade da Obra",
+closeMenu.addEventListener("click", () => {
+    menuOverlay.classList.remove("active");
+});
 
-heroDescription:
-"Projetos estruturais e de especialidades desenvolvidos com foco na coordenação técnica, exequibilidade e eficiência da construção."
+/* ==================================
+FECHAR MENU AO CLICAR NUM LINK
+================================== */
 
-},
+document.querySelectorAll(".overlay-nav a").forEach(link => {
 
-en: {
+    link.addEventListener("click", () => {
+        menuOverlay.classList.remove("active");
+    });
 
-heroTitle:
-"Engineering Designed for Real-World Construction",
+});
 
-heroDescription:
-"Structural and building services engineering projects focused on coordination, constructability and execution efficiency."
-
-}
-
-};
-
-/* =========================
-   CHANGE LANGUAGE
-========================= */
+/* ==================================
+IDIOMAS
+================================== */
 
 function setLanguage(lang){
 
-localStorage.setItem("imozetoLanguage", lang);
+    localStorage.setItem("language", lang);
 
-updateLanguage(lang);
+    document.querySelectorAll("[data-pt]").forEach(element => {
 
-}
+        if(lang === "pt"){
+            element.textContent = element.getAttribute("data-pt");
+        }
 
-/* =========================
-   UPDATE PAGE
-========================= */
+        if(lang === "en"){
+            element.textContent = element.getAttribute("data-en");
+        }
 
-function updateLanguage(lang){
-
-const heroTitle =
-document.getElementById("hero-title");
-
-const heroDescription =
-document.getElementById("hero-description");
-
-if(heroTitle){
-
-heroTitle.innerHTML =
-translations[lang].heroTitle;
+    });
 
 }
 
-if(heroDescription){
-
-heroDescription.innerHTML =
-translations[lang].heroDescription;
-
-}
-
-/* =========================
-   DATA-PT / DATA-EN
-========================= */
-
-const elements =
-document.querySelectorAll("[data-pt]");
-
-elements.forEach(element => {
-
-const value =
-element.getAttribute(`data-${lang}`);
-
-if(value){
-
-element.innerHTML = value;
-
-}
-
-});
-
-}
-
-/* =========================
-   LOAD SAVED LANGUAGE
-========================= */
+/* ==================================
+CARREGAR IDIOMA GUARDADO
+================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-const savedLanguage =
-localStorage.getItem("imozetoLanguage") || "pt";
+    const savedLanguage =
+        localStorage.getItem("language") || "pt";
 
-updateLanguage(savedLanguage);
-
-});
-
-/* =========================
-   HEADER SCROLL EFFECT
-========================= */
-
-window.addEventListener("scroll", () => {
-
-const header =
-document.querySelector(".header");
-
-if(window.scrollY > 50){
-
-header.style.boxShadow =
-"0 8px 25px rgba(0,0,0,.08)";
-
-}
-
-else{
-
-header.style.boxShadow = "none";
-
-}
+    setLanguage(savedLanguage);
 
 });
 
-/* =========================
-   SMOOTH APPEAR ANIMATION
-========================= */
+/* ==================================
+ANIMAÇÃO AO SCROLL
+================================== */
 
-const observer = new IntersectionObserver(
+const observer = new IntersectionObserver(entries => {
 
-(entries) => {
+    entries.forEach(entry => {
 
-entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
 
-if(entry.isIntersecting){
+    });
 
-entry.target.classList.add("show");
-
-}
-
+},{
+    threshold:0.15
 });
 
-},
+document.querySelectorAll(
+    ".about, .service-section, .contact"
+).forEach(section => {
 
-{
-threshold:0.15
-}
-
-);
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-const items = document.querySelectorAll(
-
-".service-card, .project-item, .about-content, .about-image, .stat"
-
-);
-
-items.forEach(item=>{
-
-item.classList.add("hidden");
-
-observer.observe(item);
-
-});
+    section.classList.add("hidden");
+    observer.observe(section);
 
 });
 ```
