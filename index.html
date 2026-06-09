@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -9,7 +8,7 @@
 
 <title>IMOZETO Engenharia</title>
 
-<meta name="description" content="Estruturas, Especialidades e Preparação Técnica de Obra para Portugal e Suíça.">
+<meta name="description" content="Estruturas, Especialidades e Preparação Técnica de Obra. Portugal e Suíça.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,13 +23,17 @@
 
 <!-- MENU OVERLAY -->
 
-<div class="menu-overlay" id="menuOverlay">
+<div class="menu-overlay" id="menuOverlay"></div>
 
-<div class="menu-close" id="closeMenu">
-✕
-</div>
+<!-- MENU LATERAL -->
 
-<nav class="overlay-nav">
+<aside class="side-menu" id="sideMenu">
+
+<button class="close-menu" id="closeMenu">
+FECHAR
+</button>
+
+<nav class="side-nav">
 
 <a href="#about"
 data-pt="Sobre"
@@ -38,16 +41,16 @@ data-en="About">
 Sobre
 </a>
 
-<a href="#structures"
-data-pt="Estruturas"
-data-en="Structures">
-Estruturas
+<a href="#services"
+data-pt="Serviços"
+data-en="Services">
+Serviços
 </a>
 
-<a href="#specialties"
-data-pt="Especialidades"
-data-en="Specialties">
-Especialidades
+<a href="#portugal"
+data-pt="Portugal"
+data-en="Portugal">
+Portugal
 </a>
 
 <a href="#switzerland"
@@ -64,7 +67,7 @@ Contacto
 
 </nav>
 
-<div class="overlay-lang">
+<div class="side-language">
 
 <button onclick="setLanguage('pt')">
 PT
@@ -76,7 +79,7 @@ EN
 
 </div>
 
-</div>
+</aside>
 
 <!-- HEADER -->
 
@@ -90,9 +93,9 @@ EN
 
 </a>
 
-<button class="menu-btn" id="openMenu">
+<button id="openMenu" class="menu-button">
 
-MENU ☰
+MENU
 
 </button>
 
@@ -104,7 +107,7 @@ MENU ☰
 
 <section id="home" class="hero">
 
-<div class="hero-overlay"></div>
+<div class="hero-background"></div>
 
 <div class="container hero-content">
 
@@ -114,26 +117,27 @@ IMOZETO ENGENHARIA
 
 </div>
 
-<h1
-data-pt="PROJETAMOS OS SEUS SONHOS. CONSTRUÍMOS CONFIANÇA."
-data-en="WE DESIGN YOUR DREAMS. WE BUILD CONFIDENCE.">
+<h1 id="heroTitle">
 
-PROJETAMOS OS SEUS SONHOS.
+PROJETAMOS OS SEUS SONHOS.<br>
 CONSTRUÍMOS CONFIANÇA.
 
 </h1>
 
-<p
-data-pt="Estruturas • Especialidades • Preparação Técnica de Obra | Portugal e Suíça"
-data-en="Structures • Building Services • Technical Construction Preparation | Portugal and Switzerland">
+<p id="heroSubtitle">
 
-Estruturas • Especialidades • Preparação Técnica de Obra | Portugal e Suíça
+Estruturas • Especialidades • Preparação Técnica de Obra
+
+<br>
+
+Portugal | Suíça
 
 </p>
 
 <div class="hero-actions">
 
-<a href="#contact" class="btn-primary"
+<a href="#contact"
+class="btn-primary"
 data-pt="Falar Connosco"
 data-en="Contact Us">
 
@@ -141,7 +145,8 @@ Falar Connosco
 
 </a>
 
-<a href="#about" class="btn-secondary"
+<a href="#about"
+class="btn-secondary"
 data-pt="Conhecer a IMOZETO"
 data-en="About IMOZETO">
 
@@ -155,7 +160,7 @@ Conhecer a IMOZETO
 
 </section>
 
-<!-- ABOUT -->
+<!-- SOBRE -->
 
 <section id="about" class="about">
 
@@ -164,8 +169,8 @@ Conhecer a IMOZETO
 <div class="about-image">
 
 <img
-src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80"
-alt="Engineering">
+src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80"
+alt="IMOZETO">
 
 </div>
 
@@ -209,9 +214,33 @@ Em Portugal desenvolvemos projetos. Na Suíça colaboramos na preparação técn
 
 </section>
 
-<!-- ESTRUTURAS -->
+<!-- SERVIÇOS -->
 
-<section id="structures" class="service-section">
+<section id="services" class="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span
+data-pt="SERVIÇOS"
+data-en="SERVICES">
+
+SERVIÇOS
+
+</span>
+
+<h2
+data-pt="O Que Fazemos"
+data-en="What We Do">
+
+O Que Fazemos
+
+</h2>
+
+</div>
+
+<div class="service-block">
 
 <div class="service-image">
 
@@ -221,39 +250,29 @@ alt="Estruturas">
 
 </div>
 
-<div class="container service-content">
+<div class="service-text">
 
-<span
-data-pt="ESTRUTURAS"
-data-en="STRUCTURES">
+<h3
+data-pt="Estruturas"
+data-en="Structures">
 
-ESTRUTURAS
+Estruturas
 
-</span>
-
-<h2
-data-pt="Projetos Estruturais"
-data-en="Structural Engineering">
-
-Projetos Estruturais
-
-</h2>
+</h3>
 
 <p
-data-pt="Betão armado, estruturas metálicas e reabilitação estrutural desenvolvidos com foco na segurança, eficiência e exequibilidade."
-data-en="Reinforced concrete, steel structures and structural rehabilitation developed with a focus on safety, efficiency and buildability.">
+data-pt="Projetos estruturais em betão armado, estruturas metálicas e reabilitação."
+data-en="Structural engineering in reinforced concrete, steel structures and rehabilitation.">
 
-Betão armado, estruturas metálicas e reabilitação estrutural desenvolvidos com foco na segurança, eficiência e exequibilidade.
+Projetos estruturais em betão armado, estruturas metálicas e reabilitação.
 
 </p>
 
 </div>
 
-</section>
+</div>
 
-<!-- ESPECIALIDADES -->
-
-<section id="specialties" class="service-section alt">
+<div class="service-block reverse">
 
 <div class="service-image">
 
@@ -263,39 +282,29 @@ alt="Especialidades">
 
 </div>
 
-<div class="container service-content">
+<div class="service-text">
 
-<span
-data-pt="ESPECIALIDADES"
-data-en="BUILDING SERVICES">
+<h3
+data-pt="Especialidades"
+data-en="Building Services">
 
-ESPECIALIDADES
+Especialidades
 
-</span>
-
-<h2
-data-pt="Coordenação Técnica"
-data-en="Technical Coordination">
-
-Coordenação Técnica
-
-</h2>
+</h3>
 
 <p
-data-pt="Águas e esgotos, térmica, acústica, SCIE e ITED desenvolvidos de forma coordenada para reduzir incompatibilidades e otimizar a construção."
-data-en="Water and drainage, thermal, acoustic, fire safety and telecommunications systems developed in a coordinated way to reduce conflicts and optimise construction.">
+data-pt="Águas e esgotos, térmica, acústica, SCIE e ITED."
+data-en="Water and drainage, thermal, acoustic, fire safety and telecommunications.">
 
-Águas e esgotos, térmica, acústica, SCIE e ITED desenvolvidos de forma coordenada para reduzir incompatibilidades e otimizar a construção.
+Águas e esgotos, térmica, acústica, SCIE e ITED.
 
 </p>
 
 </div>
 
-</section>
+</div>
 
-<!-- SUÍÇA -->
-
-<section id="switzerland" class="service-section">
+<div class="service-block">
 
 <div class="service-image">
 
@@ -305,31 +314,99 @@ alt="Preparação Técnica">
 
 </div>
 
-<div class="container service-content">
+<div class="service-text">
 
-<span
-data-pt="SUÍÇA"
-data-en="SWITZERLAND">
+<h3
+data-pt="Preparação Técnica"
+data-en="Technical Preparation">
 
-SUÍÇA
+Preparação Técnica
 
-</span>
+</h3>
 
-<h2
-data-pt="Preparação Técnica de Obra"
-data-en="Technical Construction Preparation">
+<p
+data-pt="Modelação BIM, preparação técnica de obra e apoio à execução."
+data-en="BIM modelling, technical preparation and execution support.">
+
+Modelação BIM, preparação técnica de obra e apoio à execução.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTUGAL -->
+
+<section id="portugal" class="country-section">
+
+<div class="country-image">
+
+<img
+src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80"
+alt="Portugal">
+
+</div>
+
+<div class="container country-content">
+
+<span>PORTUGAL</span>
+
+<h2>
+
+Projetos e Coordenação
+
+</h2>
+
+<ul>
+
+<li>Projetos Estruturais</li>
+
+<li>Projetos de Especialidades</li>
+
+<li>Coordenação Técnica</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- SUÍÇA -->
+
+<section id="switzerland" class="country-section dark">
+
+<div class="country-image">
+
+<img
+src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1800&q=80"
+alt="Suíça">
+
+</div>
+
+<div class="container country-content">
+
+<span>SUÍÇA</span>
+
+<h2>
 
 Preparação Técnica de Obra
 
 </h2>
 
-<p
-data-pt="Modelação BIM 3D, produção de informação técnica, quantidades, pormenorização e apoio à execução para empresas do mercado suíço."
-data-en="3D BIM modelling, technical production, quantity take-offs, detailing and execution support for Swiss construction companies.">
+<ul>
 
-Modelação BIM 3D, produção de informação técnica, quantidades, pormenorização e apoio à execução para empresas do mercado suíço.
+<li>Modelação BIM</li>
 
-</p>
+<li>Produção Técnica</li>
+
+<li>Apoio à Execução</li>
+
+</ul>
 
 </div>
 
@@ -339,17 +416,11 @@ Modelação BIM 3D, produção de informação técnica, quantidades, pormenoriz
 
 <section id="contact" class="contact">
 
-<div class="container">
+<div class="container contact-grid">
 
-<div class="contact-heading">
+<div class="contact-info">
 
-<span
-data-pt="CONTACTO"
-data-en="CONTACT">
-
-CONTACTO
-
-</span>
+<span>CONTACTO</span>
 
 <h2
 data-pt="Vamos Falar Sobre o Seu Projeto"
@@ -359,23 +430,23 @@ Vamos Falar Sobre o Seu Projeto
 
 </h2>
 
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-details">
-
 <p>
+
 📍 Largo Santo António dos Capuchos nº55 R/C<br>
 4560-454 Penafiel
+
 </p>
 
 <p>
+
 📞 +351 910 770 947
+
 </p>
 
 <p>
+
 ✉ geral@imozeto.pt
+
 </p>
 
 </div>
@@ -390,17 +461,13 @@ Vamos Falar Sobre o Seu Projeto
 
 <textarea placeholder="Descreva o seu projeto"></textarea>
 
-<button type="submit"
-data-pt="Enviar"
-data-en="Send">
+<button type="submit">
 
 Enviar
 
 </button>
 
 </form>
-
-</div>
 
 </div>
 
@@ -415,14 +482,14 @@ Enviar
 <img src="logo.png" alt="IMOZETO">
 
 <p>
+
 IMOZETO Engenharia
+
 </p>
 
-<p
-data-pt="Estruturas • Especialidades • Preparação Técnica de Obra"
-data-en="Structures • Building Services • Technical Construction Preparation">
+<p>
 
-Estruturas • Especialidades • Preparação Técnica de Obra
+Portugal | Suíça
 
 </p>
 
@@ -434,4 +501,3 @@ Estruturas • Especialidades • Preparação Técnica de Obra
 
 </body>
 </html>
-```
