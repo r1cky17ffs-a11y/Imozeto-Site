@@ -3,242 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMOZETO | Engenharia Estrutural & Allplan Detailing</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome para os Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
+    <title>IMOZETO | Engenharia Estrutural & BIM</title>
+    <!-- Google Fonts para Tipografia Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Ícones Modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- SIDEBAR / NAVIGATION -->
-    <aside class="sidebar">
-        <div class="sidebar-brand">
-            <h2>IMOZETO</h2>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="#sobre" data-i18n="menu-sobre">SOBRE</a></li>
-                <li><a href="#servicos" data-i18n="menu-servicos">SERVIÇOS</a></li>
-                <li><a href="#portugal" data-i18n="menu-portugal">PORTUGAL</a></li>
-                <li><a href="#suica" data-i18n="menu-suica">SUÍÇA</a></li>
-                <li><a href="#contacto" data-i18n="menu-contacto">CONTACTO</a></li>
+    <!-- NAV BAR SUPERIOR (Moderna, fixa e limpa) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">IMOZETO</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#portugal" class="nav-link">Portugal</a></li>
+                <li><a href="#suica" class="nav-link">Suíça</a></li>
+                <li><a href="#contacto" class="nav-link btn-nav">Falar Connosco</a></li>
+                <li class="lang-selector">
+                    <span class="active">PT</span> | <span>EN</span> | <span>DE</span>
+                </li>
             </ul>
-        </nav>
-        <div class="sidebar-lang">
-            <a href="#" class="lang-btn active" data-lang="pt">PT</a>
-            <a href="#" class="lang-btn" data-lang="en">EN</a>
-            <a href="#" class="lang-btn" data-lang="de">DE</a>
         </div>
-    </aside>
+    </nav>
 
-    <!-- MOBILE HEADER -->
-    <header class="mobile-header">
-        <div class="logo">IMOZETO</div>
-        <div class="menu-icon" id="menu-icon">
-            <span></span><span></span><span></span>
+    <!-- HERO SECTION (Impactante, igual ao teu conceito mas alinhado) -->
+    <header id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">ENGENHARIA ESTRUTURAL • ALLPLAN • BIM</span>
+            <h1 class="hero-title">Projetamos os<br>seus sonhos.<br><span class="highlight">Construímos<br>confiança.</span></h1>
+            <p class="hero-tags">Estruturas • Especialidades • Reinforcement Detailing</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-yellow">FALAR CONNOSCO</a>
+                <a href="#sobre" class="btn btn-outline">CONHECER A IMOZETO</a>
+            </div>
         </div>
     </header>
 
-    <!-- MOBILE NAVIGATION -->
-    <nav class="nav-mobile" id="nav-mobile">
-        <div class="mobile-lang-container">
-            <a href="#" class="lang-btn active" data-lang="pt">PT</a>
-            <a href="#" class="lang-btn" data-lang="en">EN</a>
-            <a href="#" class="lang-btn" data-lang="de">DE</a>
+    <!-- SECÇÃO SOBRE -->
+    <section id="sobre" class="section-about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Nós</h2>
+                    <p>A IMOZETO é um gabinete especializado em engenharia estrutural e modelação BIM de alta precisão. Combinamos rigor técnico com as ferramentas mais avançadas do mercado, como o Allplan, para entregar soluções otimizadas e desenhos de execução impecáveis.</p>
+                    <p>Atuamos de forma ágil e integrada, respondendo às exigências de projetos complexos tanto no mercado nacional como internacional.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>+100</h3>
+                        <p>Projetos Entregues</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <p>Precisão BIM</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <ul>
-            <li><a href="#sobre" data-i18n="menu-sobre-m">Sobre</a></li>
-            <li><a href="#servicos" data-i18n="menu-servicos-m">Serviços</a></li>
-            <li><a href="#portugal" data-i18n="menu-portugal-m">Portugal</a></li>
-            <li><a href="#suica" data-i18n="menu-suica-m">Suíça</a></li>
-            <li><a href="#contacto" data-i18n="menu-contacto-m">Contacto</a></li>
-        </ul>
-    </nav>
+    </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="main-content">
-
-        <!-- HERO SECTION -->
-        <section class="hero-section">
-            <div class="hero-bg"></div>
-            <div class="hero-content">
-                <span class="hero-tag" data-i18n="hero-tag">ENGENHARIA ESTRUTURAL • ALLPLAN • BIM</span>
-                <h1 data-i18n="hero-title">Projetamos os seus sonhos.<br>Construímos confiança.</h1>
-                <p data-i18n="hero-subtitle">Estruturas • Especialidades • Reinforcement Detailing</p>
-                <div class="hero-buttons">
-                    <a href="#contacto" class="btn btn-primary" data-i18n="btn-talk">FALAR CONNOSCO</a>
-                    <a href="#sobre" class="btn btn-secondary" data-i18n="btn-know">CONHECER A IMOZETO</a>
+    <!-- MERCADO PORTUGAL (Clean/Light design) -->
+    <section id="portugal" class="country-section light-bg">
+        <div class="container">
+            <div class="country-grid">
+                <div class="country-content">
+                    <span class="country-tag">MERCADO NACIONAL</span>
+                    <h2>Portugal</h2>
+                    <p class="lead">Desenvolvimento integral de projetos de engenharia e licenciamento.</p>
+                    <p>Garantimos soluções completas que cobrem todas as fases regulamentares e técnicas para a aprovação e execução da sua obra em território nacional:</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Projetos de Estruturas (Betão Armado, Pré-esforçado e Metálicas)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Redes de Águas e Saneamento (Pluviais e Residuais)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Projetos de Comportamento Térmico (REH/PES) e Acústica</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Segurança Contra Incêndios (SCIE) e Infraestruturas de Telecomunicações (ITED)</li>
+                    </ul>
+                </div>
+                <div class="country-image img-pt">
+                    <!-- Imagem placeholder que podes substituir -->
+                    <div class="img-wrapper"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ABOUT SECTION -->
-        <section id="sobre" class="about-section">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-title-block">
-                        <span class="section-number">01 . QUEM SOMOS</span>
-                        <h2 data-i18n="about-title">Engenharia de Precisão</h2>
-                    </div>
-                    <div class="about-text-block">
-                        <p data-i18n="about-text-1">A IMOZETO Engenharia atua de forma estratégica em dois mercados distintos, adaptando-se às exigências específicas de cada um.</p>
-                        <p data-i18n="about-text-2">Em Portugal, focamo-nos no desenvolvimento integral de projetos de estruturas e especialidades. Para o mercado Suíço, operamos como parceiros tecnológicos na modelação avançada em Allplan e pormenorização técnica de armaduras.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES SECTION -->
-        <section id="servicos" class="services-section">
-            <div class="container">
-                <span class="section-number">02 . COMPETÊNCIAS</span>
-                <h2 class="section-title" data-i18n="services-title">O que fazemos</h2>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-calculator"></i></div>
-                        <h3 data-i18n="s1-title">Cálculo Estrutural</h3>
-                        <p data-i18n="s1-desc">Projetos em betão armado, estruturas metálicas, madeira e reabilitação de edifícios em Portugal.</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
-                        <h3 data-i18n="s2-title">Projetos de Especialidades</h3>
-                        <p data-i18n="s2-desc">Coordenação técnica de redes hidráulicas, acústica, térmica, SCIE e infraestruturas de telecomunicações.</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-cubes"></i></div>
-                        <h3 data-i18n="s3-title">Reinforcement Detailing</h3>
-                        <p data-i18n="s3-desc">Modelação 3D em Allplan, desenhos de cofragem, armaduras e preparação técnica de obra para a Suíça.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PORTUGAL SECTION -->
-        <section id="portugal" class="country-section">
-            <div class="container">
-                <div class="country-image">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="IMOZETO Portugal">
+    <!-- MERCADO SUÍÇA (Premium/Dark design) -->
+    <section id="suica" class="country-section dark-bg">
+        <div class="container">
+            <div class="country-grid reverse">
+                <div class="country-image img-ch">
+                    <div class="img-wrapper"></div>
                 </div>
                 <div class="country-content">
-                    <span class="section-number">03 . MERCADO NACIONAL</span>
-                    <h2 data-i18n="pt-title">Portugal</h2>
-                    <p class="country-intro" data-i18n="pt-intro">Desenvolvimento integral de projetos e licenciamento para o mercado nacional.</p>
-                    
-                    <ul>
-                        <li><i class="fas fa-check"></i> <span data-i18n="pt-li1">Projetos de Estruturas (Betão e Metal)</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="pt-li2">Redes de Água e Saneamento</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="pt-li3">Comportamento Térmico e Acústico</span></li>
-                        <li><i class="fas fa-check"></i> <span data-i18n="pt-li4">Segurança Contra Incêndios (SCIE) e ITED</span></li>
+                    <span class="country-tag yellow-tag">MERCADO INTERNACIONAL</span>
+                    <h2>Suíça <span class="sub-h2">(Allplan & Detailing)</span></h2>
+                    <p class="lead">Modelação avançada e pormenorização de armaduras sob as normas SIA.</p>
+                    <p>Especialistas em outsourcing técnico de alta performance para gabinetes de engenharia e construtoras suíças, utilizando fluxo de trabalho BIM nativo:</p>
+                    <ul class="features-list yellow-icons">
+                        <li><i class="fa-solid fa-cube"></i> Modelação BIM 3D Completa em Allplan</li>
+                        <li><i class="fa-solid fa-file-lines"></i> Desenhos de Execução de Cofragem (Schalungspläne)</li>
+                        <li><i class="fa-solid fa-layer-group"></i> Pormenorização de Armaduras de Alta Complexidade (Bewehrungspläne)</li>
+                        <li><i class="fa-solid fa-list-ol"></i> Extração e Validação de Listas de Ferros (Eisenlisten)</li>
                     </ul>
-
-                    <div class="country-stats">
-                        <div class="country-stat">
-                            <strong>+100%</strong>
-                            <span data-i18n="pt-stat1">Licenciamento Assegurado</span>
-                        </div>
-                        <div class="country-stat">
-                            <strong>Cálculo</strong>
-                            <span data-i18n="pt-stat2">Otimização de Custos</span>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SWITZERLAND SECTION (PREMIUM DARK) -->
-        <section id="suica" class="country-section dark">
-            <div class="container reverse">
-                <div class="country-content">
-                    <span class="section-number" style="color: var(--primary);">04 . SUB-CONTRATAÇÃO TÉCNICA</span>
-                    <h2 data-i18n="ch-title">Suíça (Allplan & Detailing)</h2>
-                    <p class="country-intro" data-i18n="ch-intro">Modelação avançada e pormenorização de armaduras em conformidade com as normas SIA.</p>
-                    
-                    <ul>
-                        <li><i class="fas fa-layer-group"></i> <span data-i18n="ch-li1">Modelação BIM em Allplan</span></li>
-                        <li><i class="fas fa-file-alt"></i> <span data-i18n="ch-li2">Desenhos de Execução de Cofragem (Schalungspläne)</span></li>
-                        <li><i class="fas fa-cube"></i> <span data-i18n="ch-li3">Pormenorização de Armaduras (Bewehrungspläne)</span></li>
-                        <li><i class="fas fa-list-ol"></i> <span data-i18n="ch-li4">Extração Automática de Listas de Ferros (Eisenlisten)</span></li>
-                    </ul>
+    <!-- CONTACTO -->
+    <section id="contacto" class="section-contact">
+        <div class="container text-center">
+            <h2 class="section-title">Pronto para começar?</h2>
+            <p>Fale connosco para obter um orçamento ou discutir uma parceria técnica para os seus projetos.</p>
+            <a href="mailto:info@imozeto.com" class="btn btn-yellow btn-large">ENVIAR EMAIL / FALAR CONNOSCO</a>
+        </div>
+    </section>
 
-                    <div class="country-stats">
-                        <div class="country-stat">
-                            <strong>SIA</strong>
-                            <span data-i18n="ch-stat1">Normas Suíças</span>
-                        </div>
-                        <div class="country-stat">
-                            <strong>3D</strong>
-                            <span data-i18n="ch-stat2">Allplan Workflow</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="country-image">
-                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&w=800&q=80" alt="IMOZETO Switzerland">
-                </div>
-            </div>
-        </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 IMOZETO. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-        <!-- CONTACT SECTION -->
-        <section id="contacto" class="contact-section">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <span class="section-number">05 . PARCERIA</span>
-                        <h2 data-i18n="contact-title">Vamos falar sobre o seu projeto</h2>
-                        <p data-i18n="contact-desc">Seja para um projeto estrutural em Portugal ou para suporte técnico em Allplan na Suíça, estamos prontos para colaborar.</p>
-                        
-                        <div class="info-items">
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>geral@imozeto.pt</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form-container">
-                        <form class="contact-form" onsubmit="event.preventDefault();">
-                            <div class="form-group">
-                                <label data-i18n="form-name">Nome</label>
-                                <input type="text" required>
-                            </div>
-                            <div class="form-group">
-                                <label data-i18n="form-email">Email</label>
-                                <input type="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label data-i18n="form-phone">Telefone</label>
-                                <input type="tel">
-                            </div>
-                            <div class="form-group">
-                                <label data-i18n="form-message">Mensagem</label>
-                                <textarea rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary form-btn" data-i18n="form-btn">ENVIAR MENSAGEM</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <span class="footer-logo">IMOZETO</span>
-                    <p data-i18n="footer-desc">Engenharia Estrutural • Especialidades • Allplan Reinforcement Detailing</p>
-                    <p class="rights" data-i18n="footer-rights">© 2026 IMOZETO Engenharia. Todos os direitos reservados.</p>
-                </div>
-            </div>
-        </footer>
-
-    </main>
-
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
