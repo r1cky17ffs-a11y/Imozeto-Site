@@ -3,79 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>IMOZETO Engenharia</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=MvDrL9Ij-dS2qWSklfvX0ntp310w-getirS7FvbD_AfhdwL8rrKdesqnZOhy8kxXqTlteKfcJ92TQEYQ1s8o8uOIrkvbRjlxHk5Rt49BtJJnu4Fw7aZbm-AXvmCbcymIm850yS0XzHroI24dY5qQ2le2a1QXrvjFuWyYbRQoQ4xlQNRHgZO2y-plAQjdfh5Ur4iPK-m5EJElT13NxmASxbwSBvSbqehvn357tH8hdX5uMkWtAf4HiSx7381CWJk8hS2my98KJpNmaENNS9qnegFqj-B4psNcchpFv8sQAUr4k0Azj_4kimZ9Z2Ny6gry" charset="UTF-8"></script></head>
+</head>
+
 <body>
 
-<header>
-  <img src="logo.png" class="logo" alt="IMOZETO">
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#internacional">Internacional</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<header class="header">
+
+<div class="logo">
+<img src="logo.png" alt="IMOZETO">
+</div>
+
+<nav>
+
+<a href="#home" data-pt="Início" data-en="Home">Início</a>
+
+<a href="#about" data-pt="Sobre" data-en="About">Sobre</a>
+
+<a href="#services" data-pt="Serviços" data-en="Services">Serviços</a>
+
+<a href="#projects" data-pt="Projetos" data-en="Projects">Projetos</a>
+
+<a href="#international" data-pt="Internacional" data-en="International">Internacional</a>
+
+<a href="#contact" data-pt="Contacto" data-en="Contact">Contacto</a>
+
+</nav>
+
+<div class="lang-switch">
+<button onclick="setLanguage('pt')">PT</button>
+<button onclick="setLanguage('en')">EN</button>
+</div>
+
 </header>
 
-<section class="hero">
-  <img src="projeto1.png" class="hero-img">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <p class="tag">IMOZETO ENGENHARIA</p>
-    <h1>Engenharia Pensada para a Realidade da Obra</h1>
-    <p>Projetos estruturais e de especialidades desenvolvidos com foco na coordenação técnica, exequibilidade e eficiência da construção.</p>
-    <a href="#contacto" class="btn">Solicitar Proposta</a>
-  </div>
+<section id="home" class="hero">
+
+<div class="hero-left">
+
+<p class="tag">IMOZETO ENGENHARIA</p>
+
+<h1 id="hero-title">
+Engenharia Pensada para a Realidade da Obra
+</h1>
+
+<p id="hero-text">
+Projetos estruturais e de especialidades desenvolvidos com foco na coordenação técnica, exequibilidade e eficiência da construção.
+</p>
+
+<a href="#contact" class="btn-primary">
+Pedir Proposta
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2">
+
+</div>
+
 </section>
 
-<section id="sobre" class="about">
-  <div>
-    <img src="projeto2.png">
-  </div>
-  <div>
-    <span>10 ANOS DE EXPERIÊNCIA</span>
-    <h2>Projetamos para Construir</h2>
-    <p>A IMOZETO Engenharia desenvolve projetos estruturais e de especialidades para habitação, comércio, serviços e indústria.</p>
-    <p>Trabalhamos em proximidade com arquitetos, promotores e construtores para desenvolver soluções técnicas coordenadas e preparadas para a realidade da obra.</p>
-  </div>
+<section class="credibility">
+
+<div>
+<h2>10</h2>
+<p>Anos de Experiência</p>
+</div>
+
+<div>
+<h2>PT + CH</h2>
+<p>Mercados</p>
+</div>
+
+<div>
+<h2>100%</h2>
+<p>Compromisso</p>
+</div>
+
 </section>
 
-<section id="servicos">
-<h2>Serviços</h2>
+<section id="about" class="about">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+
+</div>
+
+<div class="about-content">
+
+<h2>Projetamos para Construir</h2>
+
+<p>
+A IMOZETO Engenharia desenvolve projetos estruturais e de especialidades para habitação, comércio, serviços e indústria.
+</p>
+
+<p>
+Trabalhamos em proximidade com arquitetos, promotores e construtores para desenvolver soluções técnicas coordenadas e preparadas para a realidade da obra.
+</p>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Serviços</h2>
+
 <div class="cards">
-<div class="card"><h3>Estruturas</h3><p>Betão armado, estruturas metálicas e reabilitação estrutural.</p></div>
-<div class="card"><h3>Especialidades</h3><p>Águas e esgotos, térmica, acústica, SCIE e ITED.</p></div>
-<div class="card"><h3>Coordenação Técnica</h3><p>Compatibilização de projetos e apoio técnico.</p></div>
+
+<div class="card">
+<h3>Estruturas</h3>
+<p>Betão armado, metálicas e reabilitação.</p>
 </div>
+
+<div class="card">
+<h3>Especialidades</h3>
+<p>Águas, esgotos, térmica, acústica, SCIE e ITED.</p>
+</div>
+
+<div class="card">
+<h3>Coordenação Técnica</h3>
+<p>Compatibilização e apoio técnico.</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="projetos">
-<h2>Projetos em Destaque</h2>
+<section id="projects">
+
+<h2 class="section-title">Projetos</h2>
+
 <div class="project">
-<img src="projeto1.png"><div><h3>Edifício Habitacional</h3><p>Projeto estrutural e especialidades.</p></div>
+
+<img src="projeto1.png">
+
+<div>
+<h3>Projeto Habitacional</h3>
+<p>Estruturas e Especialidades.</p>
 </div>
+
+</div>
+
 <div class="project">
-<img src="projeto2.png"><div><h3>Betão Armado</h3><p>Modelação e pormenorização estrutural.</p></div>
+
+<img src="projeto2.png">
+
+<div>
+<h3>Betão Armado</h3>
+<p>Modelação e pormenorização.</p>
 </div>
+
+</div>
+
 <div class="project">
-<img src="projeto3.png"><div><h3>Estrutura Metálica</h3><p>Dimensionamento e modelação 3D.</p></div>
+
+<img src="projeto3.png">
+
+<div>
+<h3>Estrutura Metálica</h3>
+<p>Dimensionamento e modelação.</p>
 </div>
+
+</div>
+
 </section>
 
-<section id="internacional" class="intl">
-<div><h2>Portugal</h2><p>Projetos de Estruturas, Especialidades e Coordenação Técnica.</p></div>
-<div><h2>Suíça</h2><p>Preparação Técnica de Obra, Modelação 3D e Apoio à Execução.</p></div>
+<section id="international" class="international">
+
+<div>
+
+<h2>Portugal</h2>
+
+<ul>
+<li>Estruturas</li>
+<li>Especialidades</li>
+<li>Coordenação Técnica</li>
+</ul>
+
+</div>
+
+<div>
+
+<h2>Suíça</h2>
+
+<ul>
+<li>Preparação Técnica de Obra</li>
+<li>Modelação 3D</li>
+<li>Apoio à Execução</li>
+</ul>
+
+</div>
+
 </section>
 
-<section id="contacto">
-<h2>Contacto</h2>
-<p>📍 Largo Santo António dos Capuchos n.º 55 R/C, 4560-454 Penafiel</p>
+<section id="contact">
+
+<h2 class="section-title">Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nome">
+
+<input type="email" placeholder="Email">
+
+<input type="tel" placeholder="Telefone">
+
+<textarea placeholder="Descreva o seu projeto"></textarea>
+
+<button>
+Enviar
+</button>
+
+</form>
+
+<div class="contact-info">
+
+<p>📍 Largo Santo António dos Capuchos nº55 R/C, Penafiel</p>
+
 <p>📞 910 770 947</p>
-<p>📧 geral@imozeto.pt</p>
+
+<p>✉ geral@imozeto.pt</p>
+
+</div>
+
 </section>
+
+<script src="main.js"></script>
 
 </body>
 </html>
