@@ -1,35 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     const menuIcon = document.getElementById('menu-icon');
     const navMenu = document.getElementById('nav-menu');
 
     if (menuIcon && navMenu) {
+
         menuIcon.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            menuIcon.classList.toggle('open'); // Opcional: para animar as linhas do ícone
+            menuIcon.classList.toggle('open');
         });
 
-        // Fecha o menu quando um item é clicado (útil para Single Page Applications)
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    menuIcon.classList.remove('open');
-                }
+                navMenu.classList.remove('active');
+                menuIcon.classList.remove('open');
             });
         });
+
     }
 
-    // Opcional: Animação para o ícone do menu
-    // Adicionar ao CSS:
-    /*
-    .menu-icon.open span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .menu-icon.open span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-icon.open span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-    */
+    const translations = {
+
+        pt: {
+            title: 'Projetamos os seus sonhos.<br>Construímos confiança.',
+            subtitle: 'Estruturas • Especialidades • Preparação Técnica de Obra'
+        },
+
+        en: {
+            title: 'We design your dreams.<br>We build trust.',
+            subtitle: 'Structures • Engineering Services • Construction Planning'
+        },
+
+        de: {
+            title: 'Wir planen Ihre Träume.<br>Wir bauen Vertrauen.',
+            subtitle: 'Strukturen • Fachplanung • Bauvorbereitung'
+        }
+
+    };
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+
+        btn.addEventListener('click', (e) => {
+
+            e.preventDefault();
+
+            document.querySelectorAll('.lang-btn').forEach(b => {
+                b.classList.remove('active');
+            });
+
+            btn.classList.add('active');
+
+            const lang = btn.dataset.lang;
+
+            const heroTitle = document.getElementById('hero-title');
+            const heroSubtitle = document.getElementById('hero-subtitle');
+
+            if (heroTitle) {
+                heroTitle.innerHTML = translations[lang].title;
+            }
+
+            if (heroSubtitle) {
+                heroSubtitle.innerHTML = translations[lang].subtitle;
+            }
+
+        });
+
+    });
+
 });
