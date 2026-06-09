@@ -537,5 +537,68 @@ padding:120px 0;
 padding:70px 0;
 }
 
+```css
+/* =========================
+PORTFOLIO
+========================= */
+
+.portfolio{
+padding:140px 0;
+}
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.portfolio-card{
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.portfolio-card img{
+width:100%;
+height:450px;
+object-fit:cover;
+}
+
+.portfolio-content{
+padding:40px;
+}
+
+.portfolio-content span{
+font-size:14px;
+letter-spacing:2px;
+font-weight:700;
+color:#777;
+}
+
+.portfolio-content h3{
+font-size:42px;
+margin:15px 0 25px;
+}
+
+.portfolio-content ul{
+list-style:none;
+}
+
+.portfolio-content li{
+padding:12px 0;
+border-bottom:1px solid #eee;
+}
+
+@media(max-width:992px){
+
+.portfolio-grid{
+grid-template-columns:1fr;
+}
+
+.portfolio-content h3{
+font-size:32px;
+}
+
 }
 ```
